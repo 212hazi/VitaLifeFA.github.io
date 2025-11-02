@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - VitaLife🌴</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faq-container {
+            max-width: 1200px;
+            margin: 120px auto 2rem;
+            padding: 2rem;
+            background: #000000;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            background: #000000;
+        }
+
+        .faq-header::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .faq-header h1 {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .faq-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin-bottom: 3rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .faq-category h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .faq-category h2 i {
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .faq-question {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            display: none;
+            padding-top: 1rem;
+            border-top: 1px solid var(--primary-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .faq-item.active {
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            background-color: rgba(255, 215, 0, 0.1);
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>FAQ - VitaLife🌴</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="rules.html">Règlement</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="discord.html">Discord</a></li>
+        </ul>
+    </nav>
+
+    <main class="faq-container">
+        <div class="faq-header">
+            <h1>Foire aux questions</h1>
+        </div>
+
+        <div class="faq-category">
+            <h2><i class="fas fa-sign-in-alt"></i>Rejoindre le serveur</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Comment puis-je rejoindre le serveur ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Pour rejoindre le serveur, vous devez posséder FiveM et vous inscrire sur notre serveur Discord. Suivez ensuite les instructions du canal #server-join. Après votre inscription, vous recevrez vos identifiants de connexion par message Discord.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quelles sont les exigences ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Vous aurez besoin d'une copie légale de GTA V, de FiveM et d'un microphone pour le chat vocal. Un compte Discord est également requis. Assurez-vous que votre ordinateur respecte la configuration minimale requise.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2><i class="fas fa-coins"></i>Économie et emplois</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Comment fonctionne le système monétaire ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Notre serveur utilise un système monétaire réaliste. L'argent peut être gagné par des activités légales et illégales. Toutes les transactions sont enregistrées. Vous pouvez déposer de l'argent à la banque et percevoir des intérêts.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quels sont les emplois disponibles ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Nous proposons divers emplois, notamment policier, ambulancier, mécanicien, chauffeur de taxi, et bien d'autres. Chaque poste a ses propres exigences et avantages. Consultez le canal #jobs sur Discord pour plus d'informations.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2><i class="fas fa-car"></i>Véhicules et Propriétés</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Comment puis-je acheter un véhicule ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Vous pouvez acheter un véhicule chez un concessionnaire automobile de la ville. Il vous faut un budget suffisant et un permis de conduire valide. Après l'achat, vous devrez assurer et immatriculer le véhicule.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Comment fonctionne le système de propriété ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Vous pouvez acheter ou louer des maisons et des appartements en ville. Chaque logement peut être meublé et servir d'espace de stockage. Les prix varient selon l'emplacement et la superficie.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2><i class="fas fa-shield-alt"></i>Règles et sanctions</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Que se passe-t-il si j'enfreins les règles ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Les infractions au règlement sont sanctionnées en fonction de leur gravité : avertissements, exclusions temporaires ou définitives, etc. Toutes les sanctions sont consignées dans le canal #penalties. Pour toute question, veuillez contacter l’équipe d’assistance.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Comment puis-je faire appel d'une interdiction ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Si vous estimez qu'une exclusion a été prononcée injustement, vous pouvez faire appel sur le canal #ban-appeals. Veuillez fournir toutes les informations pertinentes.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>À propos</h3>
+                    <p>Un serveur FiveM RP immersif et réaliste, centré sur la communauté et l’expérience de jeu.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="rules.html">Règlement</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Réseaux sociaux</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/vitaliferpfa" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VitaLife🌴. Tous droits réservés. | <a href="imprint.html" style="color: var(--primary-color); text-decoration: none;">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

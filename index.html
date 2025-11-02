@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - VitaLife🌴</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero {
+            background: #000000;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            margin-bottom: 3rem;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .features {
+            background: #000000;
+            position: relative;
+        }
+
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+        }
+
+        .server-info {
+            background: #000000;
+            position: relative;
+            padding: 4rem 2rem;
+        }
+
+        .server-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .server-status {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .status-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+        }
+
+        .status-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .status-item i.online {
+            color: #4CAF50;
+            animation: pulse 2s infinite;
+        }
+
+        .status-item span {
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .gallery {
+            background: #000000;
+            position: relative;
+        }
+
+        .gallery::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .feature-card {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Accueil - VitaLife🌴</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="rules.html">Règlement</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="discord.html">Discord</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bienvenue sur VitaLife🌴</h1>
+                <p>Découvrez l’expérience de jeu la plus réaliste sur VitaLife🌴</p>
+                <div class="cta-buttons">
+                    <a href="fivem://connect/dr6vqj" class="cta-button primary">Jouer maintenant</a>
+                </div>
+            </div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number">+60</span>
+                    <span class="stat-label">Joueurs actifs</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-car"></i>
+                    <span class="stat-number">+450</span>
+                    <span class="stat-label">Véhicules</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <span class="stat-number">+50</span>
+                    <span class="stat-label">Métiers</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="section-title">
+                <h2>Fonctionnalités du serveur</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Communauté active</h3>
+                    <p>Rejoins une communauté passionnée et immersive</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Véhicules réalistes</h3>
+                    <p>Système automobile complet et immersif</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Métiers variés</h3>
+                    <p>Choisis ton propre chemin et évolue dans la ville</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Fair-Play garanti</h3>
+                    <p>Administration active et respect du RP</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Propriétés</h3>
+                    <p>Achetez et personnalisez votre maison</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Système de véhicules</h3>
+                    <p>Tuning, assurance et réalisme au rendez-vous</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="server-info">
+            <div class="section-title">
+                <h2>Statut du serveur</h2>
+            </div>
+            <div class="server-status">
+                <div class="status-item">
+                    <i class="fas fa-circle online"></i>
+                    <span>En ligne</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-users"></i>
+                    <span>32/64 Joueurs</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Disponible 24/7</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="section-title">
+                <h2>Galerie du serveur</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://media.discordapp.net/attachments/1368326511123370207/1388983956988235806/image.png?ex=6907c31d&is=6906719d&hm=7d46ca976dd01155fa798f6303093f22167c9182087af651660eabf8edb5dad0&=&format=webp&quality=lossless" alt="City View">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.discordapp.net/attachments/1368326511123370207/1388418714784890921/Capture_decran_2025-06-27_182118.png?ex=6907aef1&is=69065d71&hm=422bd65ebfb665852c881b7ac231ebc8381dcdf6ec065705de72109246306e57&=&format=webp&quality=lossless" alt="Police Operation">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.discordapp.net/attachments/1368326585480118282/1406273590063661056/image.png?ex=69080a17&is=6906b897&hm=693fdd7b6bc15c510a31efa36889a30df0a18301d99a55c4f51ba29467a074bd&=&format=webp&quality=lossless" alt="Race Track">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://media.discordapp.net/attachments/1368326511123370207/1388419063725690971/Capture_decran_2025-06-25_205202.png?ex=6907af44&is=69065dc4&hm=430f186598b1ffb4235e5f3e48f5067b06a7f3d6d24cadf5776ad9ba482e5f06&=&format=webp&quality=lossless" alt="Nightlife">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>À propos</h3>
+                    <p>Un serveur FiveM unique axé sur le réalisme et la communauté.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="rules.html">Règlement</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Réseaux sociaux</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/vitaliferpfa" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VitaLife🌴. Tous droits réservés. | <a href="imprint.html" style="color: var(--primary-color); text-decoration: none;">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
